@@ -250,6 +250,8 @@ u256 EVMInstructionInterpreter::eval(
 		return m_state.difficulty;
 	case Instruction::GASLIMIT:
 		return m_state.gaslimit;
+	case Instruction::RANDOM:
+		return 0x12;
 	// --------------- memory / storage / logs ---------------
 	case Instruction::MLOAD:
 		accessMemory(arg[0], 0x20);

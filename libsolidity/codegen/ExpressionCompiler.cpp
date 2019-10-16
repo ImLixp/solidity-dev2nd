@@ -808,6 +808,11 @@ bool ExpressionCompiler::visit(FunctionCall const& _functionCall)
 			m_context << Instruction::BLOCKHASH;
 			break;
 		}
+		case FunctionType::Kind::Random:
+		{
+			m_context << Instruction::RANDOM;
+			break;
+		}
 		case FunctionType::Kind::AddMod:
 		case FunctionType::Kind::MulMod:
 		{

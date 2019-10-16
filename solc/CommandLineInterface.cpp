@@ -955,7 +955,7 @@ bool CommandLineInterface::processInput()
 		settings.runYulOptimiser = m_args.count(g_strOptimizeYul);
 		settings.optimizeStackAllocation = settings.runYulOptimiser;
 		m_compiler->setOptimiserSettings(settings);
-
+		// lixp:entry
 		bool successful = m_compiler->compile();
 
 		for (auto const& error: m_compiler->errors())

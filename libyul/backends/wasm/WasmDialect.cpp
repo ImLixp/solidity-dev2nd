@@ -65,6 +65,7 @@ WasmDialect::WasmDialect():
 
 	addFunction("datasize", 1, 4, true, true);
 	addFunction("dataoffset", 1, 4, true, true);
+	addFunction("random", 0, 4, false);
 
 	addEthereumExternals();
 }
